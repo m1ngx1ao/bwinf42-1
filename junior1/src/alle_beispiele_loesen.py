@@ -1,8 +1,8 @@
-# fuer alle input
-    # lese input
-    # loese input
-    # schreibe ergebnis
+import os
 from input_leser import Parameter
-import loeser
-res = loeser.loese(Parameter('wundertuete2.txt'))
-print(res)
+from loeser import loese
+from output_schreiber import schreibe
+
+dateien = os.scandir('junior1/input')
+for datei in dateien:
+    schreibe(datei.name, loese(Parameter(datei.name)))
