@@ -4,5 +4,5 @@ class Parameter:
 			linien = [int(l.strip()) for l in f.readlines()]
 			f.close()
 		self.tueten_num = linien[0]
-		self.geschenk_type_num = linien[1]
-		self.geschenk_num_by_type = linien[2:]
+		self.geschenk_typ_num = linien[1]
+		self.geschenk_num_by_typ = linien[2:]

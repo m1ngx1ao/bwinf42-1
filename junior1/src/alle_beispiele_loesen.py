@@ -5,4 +5,4 @@ from output_schreiber import schreibe
 
 dateien = os.scandir('junior1/input')
 for datei in dateien:
-    schreibe(datei.name, loese(Parameter(datei.name)))
+	schreibe(datei.name, loese(Parameter(datei.name)))
