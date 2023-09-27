@@ -1,4 +1,4 @@
-input = '''13 13
+13 13
 #############
 #.....#.....#
 #.###.#.###.#
@@ -25,18 +25,4 @@ input = '''13 13
 #...#.......#
 #.#.#.#.###.#
 #.#...#...#.#
-#############'''
-
-####
-
-# duggi class labyrinth
-class Labyrinth:
-
-
-l = Labyrinth()
-assert l.is_wall(2, 0, 1)
-assert not l.is_wall(2, 1, 1)
-assert not l.is_wall(10, 7, 0)
-assert l.is_wall(10, 8, 0)
-assert l.get_a() == (6, 9, 0)
-assert l.get_b() == (8, 9, 0)
+#############
