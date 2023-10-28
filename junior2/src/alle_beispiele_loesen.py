@@ -2,11 +2,8 @@ import os
 import PIL.Image
 from bild_decoder import decode
 
-dateien = os.scandir('junior2/input')
-for datei in dateien:
+for datei in os.scandir('junior2/input'):
 	name, _ = datei.name.split('.')
-	bild = PIL.Image.open(datei.path)
-	ergebnis = decode(bild)
-	with open(f'junior2/output/{name}.txt', 'w') as f:
-		f.write(f'{ergebnis}')
+	with open(f'junior2/output/{name}.txt', 'w', encoding='utf-8') as f:
+		f.write(f'{decode(PIL.Image.open(datei.path))}')
 		f.close()
